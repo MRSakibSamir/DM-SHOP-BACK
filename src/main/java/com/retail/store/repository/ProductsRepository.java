@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProductsRepository extends JpaRepository<Products, Long> {
+    long countByActiveTrue();
+
+    long countByStockLessThanEqualAndStockGreaterThan(int maxStock, int greaterThan);
 }

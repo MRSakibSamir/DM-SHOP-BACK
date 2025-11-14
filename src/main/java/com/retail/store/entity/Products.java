@@ -12,6 +12,9 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Data
+@Table(name = "products")
+
 public class Products {
 
     @Id
@@ -22,6 +25,7 @@ public class Products {
     private String description;
     private BigDecimal price;
     private Integer quantity;
+    private boolean active = true;
 
     @ManyToOne
     @JoinColumn(name = "category_id")

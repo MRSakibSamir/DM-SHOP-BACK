@@ -2,6 +2,8 @@ package com.retail.store.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +13,9 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Data
+@Table(name = "customers")
+
 public class Customer {
 
     @Id
@@ -21,6 +26,7 @@ public class Customer {
     private String email;    // Customer contact
     private String phone;
     private String address;
+    private LocalDateTime createdAt;
 
     // Optional: favorite product
     @ManyToOne
