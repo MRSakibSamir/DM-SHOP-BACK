@@ -44,15 +44,16 @@ public class SalesService {
 
             // Handle nulls safely
             BigDecimal price = itemDto.getPrice() != null ? itemDto.getPrice() : BigDecimal.ZERO;
-            int quantity = itemDto.getQuantity() != null ? itemDto.getQuantity() : 0;
+            int quantity = itemDto.getStock() != null ? itemDto.getStock() : 0;
 
             // Calculate line total safely with BigDecimal
             BigDecimal lineTotal = price.multiply(BigDecimal.valueOf(quantity));
 
+            Integer stock = null;
             Sales sale = Sales.builder()
                     .product(product)
                     .price(price)
-                    .quantity(quantity)
+                    .stock(stock)
                     .lineTotal(lineTotal)
                     .build();
 

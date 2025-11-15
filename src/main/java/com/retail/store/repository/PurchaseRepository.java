@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PurchaseRepository extends JpaRepository<Purchase, Long> {
-    @Query("SELECT SUM(p.totalAmount) FROM Purchase p")
+    @Query("SELECT COALESCE(SUM(p.total), 0) FROM Purchase p")
     Double sumTotalPurchase();
 }

@@ -19,7 +19,12 @@ public class Purchase {
     private String name;        // Name of purchased item
     private String description; // Optional description
     private BigDecimal price;   // Price at purchase
-    private Integer quantity;   // Quantity purchased
+    private Integer quantity;
+    private Double total;
+    private Double totalPrice;
+    private Double grandTotal;
+
+// Quantity purchased
 
     @ManyToOne
     @JoinColumn(name = "category_id") // foreign key to Category

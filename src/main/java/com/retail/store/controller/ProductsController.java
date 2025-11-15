@@ -33,7 +33,7 @@ public class ProductsController {
                 .name(product.getName())
                 .description(product.getDescription())
                 .price(product.getPrice())
-                .quantity(product.getQuantity())
+                .quantity(product.getStock())
                 .categoryId(product.getCategory() != null ? product.getCategory().getId() : null)
                 .categoryName(product.getCategory() != null ? product.getCategory().getName() : null)
                 .images(images)

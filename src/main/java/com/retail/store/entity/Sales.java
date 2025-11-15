@@ -32,15 +32,15 @@ public class Sales {
     @JoinColumn(name = "sales_order_id")
     private SalesOrder salesOrder;
 
-    private Integer quantity;
+    private Integer stock;
     private BigDecimal price;
     private BigDecimal lineTotal;
 
     @PrePersist
     @PreUpdate
     public void calculateLineTotal() {
-        if (price != null && quantity != null) {
-            this.lineTotal = price.multiply(BigDecimal.valueOf(quantity));
+        if (price != null && stock != null) {
+            this.lineTotal = price.multiply(BigDecimal.valueOf(stock));
         } else {
             this.lineTotal = BigDecimal.ZERO;
         }

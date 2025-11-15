@@ -45,7 +45,7 @@ public class SalesController {
 //                    sales.setName(updated.getName());
 //                    sales.setDescription(updated.getDescription());
                     sales.setPrice(updated.getPrice());
-                    sales.setQuantity(updated.getQuantity());
+                    sales.setStock(updated.getStock());
                     sales.setCategory(updated.getCategory());
 
                     // Optionally update product reference if included

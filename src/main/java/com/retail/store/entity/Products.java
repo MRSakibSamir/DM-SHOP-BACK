@@ -24,7 +24,7 @@ public class Products {
     private String name;
     private String description;
     private BigDecimal price;
-    private Integer quantity;
+    private Integer stock;
     private boolean active = true;
 
     @ManyToOne

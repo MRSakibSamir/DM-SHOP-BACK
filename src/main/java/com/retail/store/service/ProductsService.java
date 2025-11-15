@@ -54,7 +54,7 @@ public class ProductsService {
         existing.setName(product.getName());
         existing.setDescription(product.getDescription());
         existing.setPrice(product.getPrice());
-        existing.setQuantity(product.getQuantity());
+        existing.setStock(product.getStock());
         setCategoryIfPresent(existing, product.getCategory());
 
         if (imageFiles != null && !imageFiles.isEmpty()) {
